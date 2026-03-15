@@ -461,3 +461,329 @@ The primary goals of the system are:
 The platform aims to combine **chat, AI, and productivity tools into a unified workspace.**
 
 ---
+
+# 4.3 Security & Encryption
+
+The system implements multiple layers of security to protect user data and communication.
+
+## Password Encryption
+
+User passwords are never stored in plain text.
+
+Passwords are hashed using a strong hashing algorithm before storing in the database.
+
+Example:
+
+bcrypt hashing is used with salt rounds to prevent brute-force attacks.
+
+Flow:
+
+User Password
+↓
+bcrypt hashing
+↓
+stored in database as hashed value
+
+## Message Encryption
+
+### Application-Level Encryption
+
+Sensitive message data can optionally be encrypted before being stored or transmitted.
+
+Encryption Flow:
+
+Message
+↓
+AES encryption (Node.js crypto module)
+↓
+Encrypted payload
+↓
+Stored or transmitted
+↓
+Receiver decrypts message
+
+
+## Authentication Token Security
+
+Authentication is handled using JSON Web Tokens (JWT).
+
+Tokens contain encrypted user identity information and are signed using a secret key.
+
+Flow:
+
+User Login
+↓
+JWT token generated
+↓
+token stored in client
+↓
+token verified for each API request
+
+## Additional Security Measures
+
+- Rate limiting to prevent API abuse
+- Input validation to prevent injection attacks
+- XSS protection
+- CORS security policies
+- secure cookie handling
+
+
+# 8. System Architecture
+
+The system follows a **modular layered architecture** designed to support scalability, maintainability, and future microservice migration.
+
+The backend is structured to clearly separate responsibilities between API handling, business logic, AI processing, infrastructure, and real-time communication.
+
+---
+
+## 8.1 High-Level Architecture
+
+The platform consists of the following core components:
+
+- API Layer
+- Service Layer
+- AI Engine
+- Real-Time Communication Layer
+- Data Storage Layer
+- Background Processing Layer
+- Search & Indexing Layer
+
+These components work together to provide a scalable collaboration system.
+
+---
+
+## 8.2 Architecture Overview
+
+
+Client (Web / Mobile)
+↓
+API Gateway / Express Server
+↓
+Controllers (API Layer)
+↓
+Service Layer (Business Logic)
+↓
+Repository Layer
+↓
+Database (MySQL)
+
+Parallel Systems:
+
+Realtime Layer → Socket Server
+AI Engine → Agents & Pipelines
+Search System → Elasticsearch
+Queue Workers → Background Jobs
+Cache Layer → Redis
+
+
+---
+
+## 8.3 Request Flow
+
+Example: **Sending a message**
+
+
+User sends message
+↓
+HTTP API Request
+↓
+Route Handler
+↓
+Message Controller
+↓
+Message Service
+↓
+Repository Layer
+↓
+MySQL Database
+
+Parallel Actions:
+
+• WebSocket broadcast to chat members
+• Message indexed in search engine
+• AI pipeline analyzes conversation
+• Notifications queued for users
+
+
+---
+
+## 8.4 Real-Time Communication Architecture
+
+The system uses **WebSocket connections** for real-time messaging.
+
+
+Client connects to Socket Server
+↓
+Authentication middleware validates JWT
+↓
+User joins chat room
+↓
+Messages broadcast to connected clients
+
+Events handled:
+
+message.send
+message.receive
+typing.start
+typing.stop
+user.online
+user.offline
+
+
+This ensures **low-latency communication between users**.
+
+---
+
+## 8.5 AI Processing Architecture
+
+AI functionality is separated into modular components.
+
+AI system structure:
+
+
+AI Engine
+│
+├── Agents
+│ ├── Chat Agent
+│ ├── Meeting Agent
+│ └── Task Agent
+│
+├── Pipelines
+│ ├── Conversation Summarization
+│ ├── Reply Generation
+│ ├── Task Extraction
+│ └── Semantic Search
+│
+└── Model Providers
+├── LLM APIs
+├── Local Models
+└── Speech Recognition
+
+
+This architecture allows switching between different AI providers without affecting the rest of the system.
+
+---
+
+## 8.6 Background Job Processing
+
+Some operations are executed asynchronously to improve system performance.
+
+Background jobs include:
+
+- AI analysis of conversations
+- notification delivery
+- message indexing
+- file processing
+
+These jobs are processed using **queue workers**.
+
+Processing flow:
+
+
+Event Trigger
+↓
+Job added to Queue
+↓
+Worker processes job
+↓
+Result stored or notification sent
+
+
+---
+
+## 8.7 Data Storage Architecture
+
+The system uses multiple storage technologies optimized for different tasks.
+
+Primary database:
+
+
+MySQL
+
+
+Used for:
+
+- users
+- chats
+- messages
+- tasks
+- files
+
+Cache layer:
+
+
+Redis
+
+
+Used for:
+
+- session caching
+- presence tracking
+- temporary data
+
+Search index:
+
+
+Elasticsearch
+
+
+Used for:
+
+- full-text message search
+- fast query retrieval
+
+Vector database:
+
+
+Pinecone / Vector Index
+
+
+Used for:
+
+- semantic search
+- AI embeddings
+
+---
+
+## 8.8 Scalability Strategy
+
+The architecture is designed to support horizontal scaling.
+
+Key strategies include:
+
+- stateless API servers
+- distributed WebSocket servers
+- Redis for shared session state
+- containerized deployment using Docker
+
+This allows multiple backend instances to run behind a load balancer.
+
+---
+
+## 8.9 Fault Tolerance
+
+The system ensures reliability through the following mechanisms:
+
+- retry logic for background jobs
+- queue-based processing
+- error logging and monitoring
+- service isolation
+
+This prevents single component failures from crashing the entire system.
+
+---
+
+## 8.10 Future Microservice Evolution
+
+The modular architecture allows the system to be split into independent microservices.
+
+Potential service boundaries:
+
+- Authentication Service
+- Chat Service
+- AI Processing Service
+- Notification Service
+- Search Service
+- File Storage Service
+
+Each service could be deployed independently as the platform grows.
