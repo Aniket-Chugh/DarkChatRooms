@@ -11,7 +11,7 @@ Completed features are marked with ✅ and upcoming features remain unchecked.
 - [x] User registration
 - [ ] User login
 - [ ] JWT authentication
-- [ ] Password hashing (bcrypt)
+- [x] Password hashing (bcrypt)
 - [ ] Email verification
 - [ ] Password reset system
 
@@ -85,7 +85,7 @@ Completed features are marked with ✅ and upcoming features remain unchecked.
 
 ---
 
-# Future Features
+# Features
 
 - [ ] Voice messages
 - [ ] Speech-to-text
