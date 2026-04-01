@@ -62,7 +62,7 @@ const LandingPage = () => {
               <p className="text-sm text-[#525252] line-through decoration-red-500 mb-1">2. Build a profile on you.</p>
               <p className="text-sm text-[#525252] line-through decoration-red-500">3. Sell ads based on your life.</p>
 
-              <p className="text-[#161616] font-medium mt-6 mb-2">The SimChatPromise:</p>
+              <p className="text-[#161616] font-medium mt-6 mb-2">The SimChat Promise:</p>
               <p className="text-sm text-[#0f62fe] font-semibold">We lock your data. We don't show ads. Period.</p>
             </div>
           </div>
@@ -111,7 +111,7 @@ const LandingPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-[#e5e5e5]">
 
-          {/* Feature 1 */}
+          {/* Feature: Lightning Fast */}
           <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
             <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
             <h3 className="text-lg font-semibold mb-3">Lightning Fast</h3>
@@ -120,7 +120,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* Feature 2 */}
+          {/* Feature: Your AI Helper */}
           <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
             <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
             <h3 className="text-lg font-semibold mb-3">Your AI Helper</h3>
@@ -129,7 +129,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* Feature 3 */}
+          {/* Feature: Magic Search */}
           <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
             <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             <h3 className="text-lg font-semibold mb-3">Magic Search</h3>
@@ -138,7 +138,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* Feature 4 */}
+          {/* Feature: Auto To-Do Lists */}
           <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
             <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
             <h3 className="text-lg font-semibold mb-3">Auto To-Do Lists</h3>
@@ -147,7 +147,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* Feature 5: Offline Maps */}
+          {/* Feature: Offline Maps */}
           <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
             <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
             <h3 className="text-lg font-semibold mb-3">Offline Maps</h3>
@@ -156,7 +156,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* Feature 6: Offline Wikipedia */}
+          {/* Feature: Pocket Wikipedia */}
           <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
             <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
             <h3 className="text-lg font-semibold mb-3">Pocket Wikipedia</h3>
@@ -165,21 +165,66 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* Feature 7: Offline Bluetooth Chat */}
-          <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
-            <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-            <h3 className="text-lg font-semibold mb-3">Mesh Chatting</h3>
-            <p className="text-[#525252] text-sm leading-relaxed">
-              No internet? No problem. Connect and chat directly with nearby friends securely via Bluetooth in crowded events or remote areas.
-            </p>
-          </div>
-
-          {/* Feature 8: Bluetooth Video Calls */}
+          {/* Feature: Bluetooth Video Calls */}
           <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
             <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
             <h3 className="text-lg font-semibold mb-3">Bluetooth Video Calls</h3>
             <p className="text-[#525252] text-sm leading-relaxed">
               Enjoy crisp, secure, close-range video calls powered by a direct Bluetooth connection—zero mobile data required.
+            </p>
+          </div>
+
+          {/* Feature: Pinned Conversations & Smart Folders */}
+          <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
+            <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+            <h3 className="text-lg font-semibold mb-3">Pinned & Smart Folders</h3>
+            <p className="text-[#525252] text-sm leading-relaxed">
+              Keep your most important chats at the top and automatically organize work, family, and friend groups into customized neat folders.
+            </p>
+          </div>
+
+          {/* Feature: Voice Notes & Voice-to-Text */}
+          <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
+            <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+            <h3 className="text-lg font-semibold mb-3">Voice Notes & Transcripts</h3>
+            <p className="text-[#525252] text-sm leading-relaxed">
+              Send crystal-clear voice memos or read them on the go with our highly accurate, completely on-device voice-to-text transcription.
+            </p>
+          </div>
+
+          {/* Feature: Temporary Ephemeral Messages */}
+          <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
+            <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h3 className="text-lg font-semibold mb-3">Ephemeral Messages</h3>
+            <p className="text-[#525252] text-sm leading-relaxed">
+              Set your messages to self-destruct after a certain time. Once they're gone, they are permanently erased from all devices.
+            </p>
+          </div>
+
+          {/* Feature: One-time Photos */}
+          <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
+            <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path strokeLinecap="round" strokeLinejoin="miter" strokeWidth="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            <h3 className="text-lg font-semibold mb-3">One-Time Photos</h3>
+            <p className="text-[#525252] text-sm leading-relaxed">
+              Share sensitive photos securely. The image vanishes immediately after it is viewed once, leaving absolutely no trace behind.
+            </p>
+          </div>
+
+          {/* Feature: Anonymous Mode / Hidden Chats */}
+          <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
+            <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path></svg>
+            <h3 className="text-lg font-semibold mb-3">Hidden Chats</h3>
+            <p className="text-[#525252] text-sm leading-relaxed">
+              Lock specific conversations behind a PIN or biometric scan, keeping them completely invisible from your main chat list.
+            </p>
+          </div>
+
+          {/* Feature: Multi-Language Translation */}
+          <div className="p-8 border-b border-r border-[#e5e5e5] hover:bg-[#f4f4f4] transition-colors cursor-default group">
+            <svg className="w-8 h-8 text-[#0f62fe] mb-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+            <h3 className="text-lg font-semibold mb-3">In-Chat Translation</h3>
+            <p className="text-[#525252] text-sm leading-relaxed">
+              Chat seamlessly with anyone in the world. Messages are translated locally on your device in real-time without pinging external servers.
             </p>
           </div>
 
