@@ -1,11 +1,15 @@
 import { RegisterDao } from "../../repositories/user.repository.js";
 import { bcryptHash } from "../../utils/bcrypt.js";
 import { registrationInputValidation } from "../../validation/input.registration.validation.js";
+import { cookieOptions } from "../../connections/cookies.connection.js";
 
 export const register = async (req, res) => {
     try {
-        if (!req.body) {
-            return res.status(400).json({ message: "Body missing" });
+        if (!req.body || typeof req.body !== 'object') {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid request. Data is missing."
+            });
         }
 
 
@@ -14,38 +18,50 @@ export const register = async (req, res) => {
             pass: req.body.password
         });
 
-        console.log(validation);
-
 
         if (!validation.success) {
             return res.status(400).json({
+                success: false,
                 message: "Validation failed",
                 errors: validation.errors
             });
         }
 
-
         const { username, displayName, email, pass } = validation.data;
-
 
         const hashedPass = await bcryptHash(pass);
 
-
-        await RegisterDao({
+        const data = await RegisterDao({
             username,
             displayName,
             email,
             hashedPass
         });
 
+
+        const expiryTime = Number(data?.expireIn) || 900000;
+
+        res.cookie("accessToken", data.accessToken, cookieOptions(expiryTime));
+
+
         return res.status(201).json({
-            message: "RegisterDao code worked"
+            success: true,
+            message: "User registered successfully.",
         });
 
     } catch (error) {
-        console.error(error);
+        console.error(`[Registration_Controller_Error]:`, error);
+
+        if (error.code === 'ER_DUP_ENTRY' || error.message.includes("exists")) {
+            return res.status(409).json({
+                success: false,
+                message: "A user with this email or username already exists."
+            });
+        }
+
         return res.status(500).json({
-            message: "Internal Server Error"
+            success: false,
+            message: "An unexpected error occurred. Please try again later."
         });
     }
 };
